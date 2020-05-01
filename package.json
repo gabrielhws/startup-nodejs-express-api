@@ -1,0 +1,90 @@
+{
+  "name": "startup-nodejs-express-api",
+  "version": "1.0.0",
+  "description": "Startup: NodeJS + Express REST API with NoSQL Database.",
+  "main": "",
+  "homepage": "https://github.com/gabrielhws/startup-nodejs-express-api",
+  "engines": {
+    "node": ">=12.0"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/gabrielhws/startup-nodejs-express-api.git"
+  },
+  "authors": [
+    "Gabriel Ferreira <gabrielhws@gmail.com>"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cachegoose": "^8.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-request-id": "^1.4.1",
+    "express-useragent": "^1.0.13",
+    "fs": "0.0.1-security",
+    "glob": "^7.1.6",
+    "helmet": "^3.22.0",
+    "i18n": "^0.9.0",
+    "jwt-simple": "^0.5.6",
+    "lodash": "^4.17.15",
+    "log4js": "^6.2.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.10",
+    "mongoose-aggregate-paginate-v2": "^1.0.4",
+    "mongoose-deep-populate": "^3.1.1",
+    "mongoose-delete": "^0.5.2",
+    "mongoose-hidden": "^1.9.0",
+    "mongoose-paginate-v2": "^1.3.9",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-formatter-git-log": "^0.5.3",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-chai-expect": "^2.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-watch": "^6.0.1",
+    "husky": "^4.2.5",
+    "mocha": "^7.1.2",
+    "nodemon": "^2.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{js,jsx}": [
+      "eslint --fix",
+      "pretty-quick -- staged",
+      "git add"
+    ]
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*",
+      "/logs/*",
+      "/locales/*"
+    ]
+  }
+}

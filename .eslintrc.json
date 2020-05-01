@@ -1,0 +1,56 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false,
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
+  "extends": [
+    "airbnb-base/legacy",
+    "prettier",
+    "plugin:node/recommended",
+    "plugin:chai-expect/recommended"
+  ],
+  "plugins": ["chai-expect"],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "mocha": true
+  },
+  "globals": {
+    "__DEV__": "readonly",
+    "__": "readonly"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [["root", "./src"]]
+    }
+  },
+  "rules": {
+    "strict": "off",
+    "no-underscore-dangle": "off",
+    "node/no-unpublished-require": 0,
+    "node/no-unpublished-import": 0,
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "radix": ["error", "as-needed"],
+    "node/no-unsupported-features/es-syntax": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "should|expect"
+      }
+    ],
+    "max-len": "off",
+    "prefer-promise-reject-errors": ["off"]
+  }
+}
