@@ -22,6 +22,7 @@ Startup: NodeJS + Express REST API with NoSQL Database.
 - Install Robo3T (https://robomongo.org/)
 - Install Redis (https://redis.io/)
 - Create a MLab account (https://mlab.com/)
+- Update 'database' field in './config/env/pt_BR/development.js'
 
 ### Instructions
 
